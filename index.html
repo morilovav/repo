@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>О Камчатке</title>
+<meta name="description" content="Камчатка: вулканы, гейзеры, медведи и бескрайняя природа Дальнего Востока.">
+<style>
+  :root {
+    --bg: #fbf8f4;
+    --text: #25222b;
+    --muted: #6b6573;
+    --accent: #e8590c;
+    --accent2: #6741d9;
+    --card: #ffffff;
+    --border: #eee6dc;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+  }
+  .hero {
+    position: relative;
+    height: 78vh;
+    min-height: 420px;
+    max-height: 640px;
+    overflow: hidden;
+    color: #fff;
+  }
+  .hero svg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+  .hero-text {
+    position: absolute;
+    top: 14%;
+    left: 0; right: 0;
+    text-align: center;
+    padding: 0 20px;
+    text-shadow: 0 2px 18px rgba(30, 10, 60, .55);
+  }
+  .hero-text h1 { font-size: clamp(2.6rem, 8vw, 4.8rem); font-weight: 800; letter-spacing: 1px; }
+  .hero-text p { margin-top: 10px; font-size: clamp(1rem, 2.6vw, 1.35rem); opacity: .95; }
+  nav {
+    background: linear-gradient(90deg, var(--accent2), var(--accent));
+    text-align: center;
+    padding: 13px 10px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    display: inline-block;
+  }
+  nav a:hover { text-decoration: underline; }
+  main { max-width: 900px; margin: 0 auto; padding: 44px 20px 20px; }
+  section { margin-bottom: 56px; scroll-margin-top: 60px; }
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+    color: #2a1f4d;
+    display: inline-block;
+    border-bottom: 4px solid var(--accent);
+    padding-bottom: 4px;
+  }
+  p { margin-bottom: 14px; }
+  .pic {
+    margin: 22px 0 8px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(60, 30, 90, .18);
+    line-height: 0;
+  }
+  .pic svg { width: 100%; height: auto; display: block; }
+  .caption { font-size: .9rem; color: var(--muted); text-align: center; margin-top: 8px; }
+  .facts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 16px;
+    margin-top: 22px;
+  }
+  .fact {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-top: 5px solid var(--accent);
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 4px 14px rgba(0,0,0,.05);
+  }
+  .fact:nth-child(2) { border-top-color: var(--accent2); }
+  .fact:nth-child(3) { border-top-color: #0ca678; }
+  .fact:nth-child(4) { border-top-color: #1c7ed6; }
+  .fact i { font-style: normal; font-size: 1.6rem; display: block; }
+  .fact b { display: block; font-size: 1.3rem; color: #2a1f4d; }
+  .fact span { color: var(--muted); font-size: .95rem; }
+  ul { margin: 0 0 14px 22px; }
+  li { margin-bottom: 6px; }
+  footer {
+    text-align: center;
+    color: #fff;
+    font-size: .9rem;
+    padding: 28px 20px 36px;
+    background: linear-gradient(90deg, #2a1f4d, #5a2a6e);
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== Заглавная иллюстрация ===== -->
+<header class="hero">
+  <svg viewBox="0 0 1200 520" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Закат над вулканами">
+    <defs>
+      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#1b1464"/>
+        <stop offset=".38" stop-color="#6a2fa3"/>
+        <stop offset=".68" stop-color="#f0506e"/>
+        <stop offset="1" stop-color="#ffb347"/>
+      </linearGradient>
+      <radialGradient id="glow">
+        <stop offset="0" stop-color="#fff3b0" stop-opacity=".95"/>
+        <stop offset=".45" stop-color="#ffc857" stop-opacity=".5"/>
+        <stop offset="1" stop-color="#ff8c42" stop-opacity="0"/>
+      </radialGradient>
+      <linearGradient id="lake" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#ff9f5a"/>
+        <stop offset="1" stop-color="#7a3d8c"/>
+      </linearGradient>
+    </defs>
+    <rect width="1200" height="520" fill="url(#sky)"/>
+    <g fill="#fff" opacity=".85">
+      <circle cx="90" cy="50" r="1.8"/><circle cx="230" cy="110" r="1.4"/><circle cx="340" cy="40" r="2"/>
+      <circle cx="560" cy="70" r="1.6"/><circle cx="690" cy="30" r="2"/><circle cx="900" cy="80" r="1.6"/>
+      <circle cx="1050" cy="45" r="2"/><circle cx="1150" cy="120" r="1.5"/><circle cx="780" cy="140" r="1.3"/>
+    </g>
+    <circle cx="840" cy="370" r="190" fill="url(#glow)"/>
+    <circle cx="840" cy="370" r="64" fill="#ffe29a"/>
+
+    <!-- дальние горы -->
+    <path d="M0 400 L130 320 L240 372 L380 290 L510 365 L650 305 L790 380 L930 320 L1070 372 L1200 330 L1200 520 L0 520Z" fill="#8a3f8f" opacity=".9"/>
+    <path d="M380 290 L350 315 L372 310 L382 322 L396 308 L412 316Z" fill="#fff" opacity=".85"/>
+    <path d="M650 305 L624 328 L644 324 L652 334 L666 322 L680 330Z" fill="#fff" opacity=".85"/>
+    <path d="M930 320 L906 342 L924 338 L932 348 L944 336 L958 344Z" fill="#fff" opacity=".85"/>
+
+    <!-- главный вулкан -->
+    <path d="M60 520 Q290 360 372 205 L448 205 Q530 360 800 520Z" fill="#4b2477"/>
+    <path d="M60 520 Q290 360 372 205 L400 205 Q330 370 190 520Z" fill="#3a1b63" opacity=".6"/>
+    <path d="M372 205 L448 205 L466 244 L438 232 L418 262 L398 234 L376 246 L356 242Z" fill="#fff" opacity=".96"/>
+    <!-- дымка из кратера -->
+    <g fill="#fff">
+      <circle cx="412" cy="190" r="22" opacity=".55"/>
+      <circle cx="432" cy="160" r="30" opacity=".42"/>
+      <circle cx="466" cy="124" r="38" opacity=".32"/>
+      <circle cx="520" cy="94" r="46" opacity=".22"/>
+      <circle cx="590" cy="76" r="52" opacity=".14"/>
+    </g>
+
+    <!-- второй вулкан -->
+    <path d="M700 520 Q860 410 912 332 L956 332 Q1010 410 1200 520Z" fill="#5c2f86"/>
+    <path d="M912 332 L956 332 L968 358 L948 350 L934 372 L920 352 L904 360Z" fill="#fff" opacity=".95"/>
+
+    <!-- передний план -->
+    <path d="M0 470 Q200 430 400 466 T800 462 T1200 448 L1200 520 L0 520Z" fill="#241046"/>
+    <g fill="#160a2e">
+      <path d="M40 520 L58 440 L76 520Z"/><path d="M72 520 L94 425 L116 520Z"/><path d="M110 520 L126 452 L142 520Z"/>
+      <path d="M1040 520 L1060 438 L1080 520Z"/><path d="M1076 520 L1100 420 L1124 520Z"/><path d="M1120 520 L1138 450 L1156 520Z"/>
+    </g>
+  </svg>
+  <div class="hero-text">
+    <h1>Камчатка</h1>
+    <p>Край вулканов, гейзеров и дикой природы</p>
+  </div>
+</header>
+
+<nav>
+  <a href="#about">Общие сведения</a>
+  <a href="#nature">Природа</a>
+  <a href="#wildlife">Животный мир</a>
+  <a href="#travel">Путешествия</a>
+</nav>
+
+<main>
+
+  <section id="about">
+    <h2>Общие сведения</h2>
+    <p>Камчатка — полуостров на востоке России, омываемый Тихим океаном, Охотским и Беринговым морями. Это один из самых удалённых и малонаселённых регионов страны. Административный центр Камчатского края — город Петропавловск-Камчатский, расположенный на берегу живописной Авачинской бухты.</p>
+    <p>Из-за удалённости от центральной части страны здесь действует часовой пояс UTC+12, а разница с Москвой составляет девять часов.</p>
+    <div class="facts">
+      <div class="fact"><i>🧭</i><b>около 1200 км</b><span>протяжённость полуострова с севера на юг</span></div>
+      <div class="fact"><i>🌋</i><b>~300</b><span>вулканов, из них порядка тридцати действующих</span></div>
+      <div class="fact"><i>🏞️</i><b>1996</b><span>год включения «Вулканов Камчатки» в список ЮНЕСКО</span></div>
+      <div class="fact"><i>🕛</i><b>UTC+12</b><span>часовой пояс региона</span></div>
+    </div>
+  </section>
+
+  <section id="nature">
+    <h2>Природа</h2>
+    <p>Камчатка расположена в зоне активной вулканической деятельности — это часть Тихоокеанского огненного кольца. Самый высокий действующий вулкан Евразии, Ключевская Сопка, поднимается более чем на 4700 метров над уровнем моря.</p>
+
+    <div class="pic">
+      <svg viewBox="0 0 800 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Долина гейзеров">
+        <defs>
+          <linearGradient id="sky2" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#4dabf7"/><stop offset="1" stop-color="#ffe8cc"/>
+          </linearGradient>
+          <linearGradient id="river" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#15aabf"/><stop offset="1" stop-color="#3bc9db"/>
+          </linearGradient>
+        </defs>
+        <rect width="800" height="320" fill="url(#sky2)"/>
+        <circle cx="690" cy="62" r="30" fill="#ffd43b"/>
+        <!-- дальние сопки -->
+        <path d="M0 200 L120 130 L230 190 L360 100 L470 185 L590 140 L700 190 L800 150 L800 320 L0 320Z" fill="#9775fa" opacity=".75"/>
+        <path d="M360 100 L336 124 L354 120 L362 132 L374 118 L388 126Z" fill="#fff"/>
+        <!-- склоны -->
+        <path d="M0 230 Q150 195 300 225 T620 220 T800 215 L800 320 L0 320Z" fill="#f59f00"/>
+        <path d="M0 255 Q180 230 340 255 T800 250 L800 320 L0 320Z" fill="#74b816"/>
+        <path d="M0 285 Q200 262 420 284 T800 278 L800 320 L0 320Z" fill="#e8590c" opacity=".85"/>
+        <!-- речка -->
+        <path d="M-10 300 Q150 270 320 292 T620 286 T820 296 L820 320 L-10 320Z" fill="url(#river)"/>
+        <!-- гейзеры -->
+        <g fill="#fff">
+          <path d="M236 262 Q240 190 218 140 Q250 112 282 140 Q262 190 266 262Z" opacity=".9"/>
+          <circle cx="216" cy="130" r="22" opacity=".8"/><circle cx="250" cy="104" r="28" opacity=".85"/>
+          <circle cx="288" cy="128" r="22" opacity=".75"/><circle cx="262" cy="76" r="20" opacity=".6"/>
+
+          <path d="M418 268 Q421 214 406 180 Q430 160 452 180 Q438 214 442 268Z" opacity=".9"/>
+          <circle cx="404" cy="172" r="16" opacity=".8"/><circle cx="430" cy="152" r="21" opacity=".85"/>
+          <circle cx="456" cy="172" r="16" opacity=".75"/>
+
+          <path d="M582 266 Q586 200 566 156 Q596 130 626 156 Q608 200 612 266Z" opacity=".9"/>
+          <circle cx="564" cy="146" r="19" opacity=".8"/><circle cx="596" cy="120" r="25" opacity=".85"/>
+          <circle cx="630" cy="146" r="19" opacity=".75"/><circle cx="604" cy="92" r="17" opacity=".55"/>
+        </g>
+        <!-- ямки гейзеров -->
+        <g fill="#c2410c"><ellipse cx="251" cy="265" rx="26" ry="7"/><ellipse cx="430" cy="270" rx="22" ry="6"/><ellipse cx="597" cy="268" rx="26" ry="7"/></g>
+        <g fill="#38d9a9"><ellipse cx="251" cy="264" rx="18" ry="4"/><ellipse cx="430" cy="269" rx="14" ry="3"/><ellipse cx="597" cy="267" rx="18" ry="4"/></g>
+      </svg>
+    </div>
+    <p class="caption">Долина гейзеров — одно из крупнейших гейзерных полей в мире</p>
+
+    <p>Главная жемчужина полуострова — Долина гейзеров на территории Кроноцкого заповедника. Она была открыта в 1941 году. Помимо гейзеров, здесь множество горячих источников, термальных озёр и грязевых котлов.</p>
+    <ul>
+      <li>Кроноцкий биосферный заповедник и Кроноцкое озеро</li>
+      <li>Налычевская долина и природный парк «Налычево»</li>
+      <li>Курильское озеро — место нереста нерки</li>
+      <li>Термальные источники Паратунки и Налычево</li>
+    </ul>
+  </section>
+
+  <section id="wildlife">
+    <h2>Животный мир</h2>
+    <p>Камчатка известна одной из самых крупных популяций бурого медведя в мире. Летом и осенью, во время нереста лосося, медведи собираются у рек и озёр, и за ними можно наблюдать с безопасного расстояния.</p>
+
+    <div class="pic">
+      <svg viewBox="0 0 800 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Медведь и лосось">
+        <defs>
+          <linearGradient id="sky3" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#a5d8ff"/><stop offset="1" stop-color="#e3fafc"/>
+          </linearGradient>
+          <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#22b8cf"/><stop offset="1" stop-color="#0b7285"/>
+          </linearGradient>
+        </defs>
+        <rect width="800" height="320" fill="url(#sky3)"/>
+        <!-- лес -->
+        <g fill="#2b8a3e">
+          <path d="M0 190 L30 90 L60 190Z"/><path d="M40 190 L78 70 L116 190Z"/><path d="M100 190 L136 100 L172 190Z"/>
+          <path d="M160 190 L200 80 L240 190Z"/><path d="M620 190 L660 76 L700 190Z"/><path d="M680 190 L722 96 L764 190Z"/><path d="M740 190 L772 110 L804 190Z"/>
+        </g>
+        <g fill="#37b24d">
+          <path d="M240 190 L280 100 L320 190Z"/><path d="M560 190 L596 104 L632 190Z"/>
+        </g>
+        <rect y="188" width="800" height="22" fill="#5c940d"/>
+        <!-- река -->
+        <rect y="206" width="800" height="114" fill="url(#water)"/>
+        <!-- прыгающий лосось -->
+        <path d="M500 232 Q560 70 640 150" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="4 7" opacity=".7"/>
+        <g transform="translate(548 110) rotate(-28)">
+          <ellipse cx="0" cy="0" rx="40" ry="14" fill="#fa5252"/>
+          <path d="M34 0 L58 -14 L58 14Z" fill="#e03131"/>
+          <ellipse cx="-8" cy="4" rx="26" ry="6" fill="#ffa8a8" opacity=".6"/>
+          <circle cx="-26" cy="-3" r="2.5" fill="#212529"/>
+        </g>
+        <!-- рыбы в воде -->
+        <g fill="#ff8787" opacity=".9">
+          <ellipse cx="640" cy="260" rx="26" ry="8"/><path d="M660 260 L678 250 L678 270Z"/>
+          <ellipse cx="710" cy="288" rx="22" ry="7"/><path d="M728 288 L744 280 L744 296Z"/>
+        </g>
+        <!-- медведь -->
+        <g>
+          <ellipse cx="230" cy="190" rx="118" ry="78" fill="#7b4a2a"/>
+          <path d="M138 198 Q150 150 210 140 Q250 148 256 190Z" fill="#8d5a34"/>
+          <rect x="150" y="226" width="40" height="68" rx="18" fill="#6b3f22"/>
+          <rect x="260" y="226" width="40" height="68" rx="18" fill="#6b3f22"/>
+          <!-- голова -->
+          <circle cx="352" cy="150" r="52" fill="#8d5a34"/>
+          <circle cx="322" cy="104" r="16" fill="#7b4a2a"/><circle cx="322" cy="104" r="8" fill="#c49a6c"/>
+          <circle cx="382" cy="104" r="16" fill="#7b4a2a"/><circle cx="382" cy="104" r="8" fill="#c49a6c"/>
+          <ellipse cx="388" cy="168" rx="30" ry="22" fill="#d4a373"/>
+          <ellipse cx="408" cy="160" rx="9" ry="7" fill="#2b1d12"/>
+          <circle cx="352" cy="136" r="5" fill="#2b1d12"/><circle cx="378" cy="138" r="5" fill="#2b1d12"/>
+          <path d="M376 182 Q392 192 406 180" fill="none" stroke="#2b1d12" stroke-width="3" stroke-linecap="round"/>
+          <!-- лапа тянется к рыбе -->
+          <path d="M320 210 Q400 230 440 250" fill="none" stroke="#6b3f22" stroke-width="30" stroke-linecap="round"/>
+        </g>
+        <!-- вода поверх лап -->
+        <path d="M0 262 Q60 252 120 262 T240 262 T360 262 T480 262 T600 262 T720 262 T800 262 L800 320 L0 320Z" fill="#15aabf" opacity=".55"/>
+        <path d="M0 292 Q70 284 140 292 T280 292 T420 292 T560 292 T700 292 T840 292 L840 320 L0 320Z" fill="#0b7285" opacity=".6"/>
+        <!-- брызги -->
+        <g fill="#fff" opacity=".8"><circle cx="500" cy="238" r="4"/><circle cx="518" cy="228" r="3"/><circle cx="486" cy="226" r="3"/></g>
+      </svg>
+    </div>
+    <p class="caption">Бурый медведь на нерестовой реке — классическая камчатская картина</p>
+
+    <p>Богата и морская фауна: у берегов встречаются нерпы, сивучи, морские котики, косатки и киты. В небе — белоплечие орланы, орлы-беркуты и кайры, гнездящиеся на птичьих базарах. Реки полуострова — важнейшее место нереста тихоокеанских лососей: чавычи, нерки, кеты, горбуши и кижуча.</p>
+  </section>
+
+  <section id="travel">
+    <h2>Путешествия</h2>
+    <p>Добраться до Камчатки можно только по воздуху или морем: сухопутного сообщения с материком нет. Основной аэропорт — Елизово под Петропавловском-Камчатским. Многие маршруты по полуострову проходят на вертолётах и вездеходах, так как дорог здесь немного.</p>
+
+    <div class="pic">
+      <svg viewBox="0 0 800 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Авачинская бухта и вулканы">
+        <defs>
+          <linearGradient id="sky4" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#ffd8a8"/><stop offset=".6" stop-color="#ffa8a8"/><stop offset="1" stop-color="#e599f7"/>
+          </linearGradient>
+          <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#4dabf7"/><stop offset="1" stop-color="#1864ab"/>
+          </linearGradient>
+        </defs>
+        <rect width="800" height="320" fill="url(#sky4)"/>
+        <circle cx="130" cy="86" r="34" fill="#fff3bf"/>
+        <!-- вулкан слева -->
+        <path d="M60 200 Q210 150 280 70 L322 70 Q400 150 520 200Z" fill="#7048e8"/>
+        <path d="M280 70 L322 70 L336 98 L316 90 L302 112 L288 92 L270 100Z" fill="#fff"/>
+        <path d="M280 70 Q250 140 120 200 L60 200 Q210 150 280 70Z" fill="#5f3dc4" opacity=".5"/>
+        <!-- вулкан справа -->
+        <path d="M400 200 Q520 160 570 100 L610 100 Q680 160 800 200Z" fill="#9c36b5"/>
+        <path d="M570 100 L610 100 L622 124 L604 118 L592 136 L580 118 L562 126Z" fill="#fff"/>
+        <!-- берег -->
+        <path d="M0 196 Q100 186 200 198 T420 200 T640 196 T800 200 L800 220 L0 220Z" fill="#364fc7" opacity=".8"/>
+        <!-- море -->
+        <rect y="210" width="800" height="110" fill="url(#sea)"/>
+        <path d="M0 230 Q40 222 80 230 T160 230 T240 230 T320 230 T400 230 T480 230 T560 230 T640 230 T720 230 T800 230" fill="none" stroke="#a5d8ff" stroke-width="3" opacity=".7"/>
+        <path d="M0 262 Q50 254 100 262 T200 262 T300 262 T400 262 T500 262 T600 262 T700 262 T800 262" fill="none" stroke="#74c0fc" stroke-width="3" opacity=".6"/>
+        <path d="M0 296 Q60 288 120 296 T240 296 T360 296 T480 296 T600 296 T720 296 T840 296" fill="none" stroke="#4dabf7" stroke-width="3" opacity=".6"/>
+        <!-- парусник -->
+        <g transform="translate(470 196)">
+          <path d="M-46 36 L46 36 L30 56 L-30 56Z" fill="#c92a2a"/>
+          <rect x="-2" y="-48" width="4" height="84" fill="#495057"/>
+          <path d="M6 -44 L6 28 L44 28Z" fill="#fff"/>
+          <path d="M-6 -36 L-6 28 L-36 28Z" fill="#ffe066"/>
+        </g>
+        <!-- отражение солнца -->
+        <g fill="#fff3bf" opacity=".6"><rect x="108" y="226" width="44" height="4" rx="2"/><rect x="116" y="238" width="30" height="4" rx="2"/><rect x="122" y="250" width="18" height="4" rx="2"/></g>
+      </svg>
+    </div>
+    <p class="caption">Авачинская бухта и вулканы близ Петропавловска-Камчатского</p>
+
+    <ul>
+      <li><b>Лето (июль — сентябрь)</b> — лучшее время для походов, рыбалки и наблюдения за медведями.</li>
+      <li><b>Зима (декабрь — апрель)</b> — горные лыжи, фрирайд, катание на собачьих упряжках.</li>
+      <li><b>Осень</b> — яркая тундра и первый снег на вершинах вулканов.</li>
+    </ul>
+    <p>Для любого выезда в дикую природу стоит заранее изучить маршрут, проверить погоду и по возможности идти в сопровождении опытного гида.</p>
+  </section>
+
+</main>
+
+<footer>
+  © 2026 · Страница о Камчатке
+</footer>
+
+</body>
+</html>
